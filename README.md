@@ -30,3 +30,29 @@ To run the React app, use the following command:
 `npm start`
 
 This will start the development server and open the app in your default web browser.
+
+### Usage
+
+1. Launch the application and log in using the following default credentials:
+
+- Email: wrollen0320@gmail.com
+- Password: password
+
+Alternatively, you can use the credentials from the `user` table created and seeded by the `send-money-api`. Choose an email from the table and use the password `password` for authentication.
+
+2. After logging in, you will be redirected to the dashboard page which consists of:
+- Account Balance panel
+- Transaction History panel
+- Action panel
+
+3. Action Panel:
+- Send Money to User: Clicking this will open a form. Fill in the recipient's email and the amount. You can cancel or submit the form. The form will only submit if the required fields are filled.
+- Send Money to Bank: Choose a provider, bank, and input the amount. Note that changing the provider will reset the bank selection, as different providers support different banks. You can't select a disabled bank or provider.
+
+4. Error Handling:
+- If there's an error from the server, it will be displayed above the buttons.
+- If there's no error, a success message will appear, and the transaction history and account balance will update.
+
+5. Transaction History:
+- If there's more than one transaction history log, a "Show More" button will appear.
+- Clicking the "Show More" button will open a modal with a paginated table of history logs.
