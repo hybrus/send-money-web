@@ -9,8 +9,8 @@ api.interceptors.response.use(
 		return response;
 	},
 	(error) => {
-		if (error.response && error.response.status === 401) {
-			// Redirect to login page
+		if (error.response && error.response.status === 401 && window.location.pathname !== '/login') {
+			// console.log(window.location.href);
 			window.location.href = '/login';
 		}
 		return Promise.reject(error);
